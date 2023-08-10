@@ -40,6 +40,11 @@ jobs:
 
     - name: Install cibuildwheel
       run: python3 -m pip install cibuildwheel==2.11.2
+    
+    - name: SSH Debugging
+      uses: lhotari/action-upterm@v1
+      with:
+        limit-access-to-actor: true
 
     - name: Build wheels
       run: python3 -m cibuildwheel --output-dir wheelhouse
