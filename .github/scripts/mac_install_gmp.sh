@@ -14,5 +14,5 @@ if [ "$CIBW_ARCHS_MACOS" = "arm64" ]; then
   echo $cache_path
   curl --output $cache_path http://ftp.swin.edu.au/gnu/gmp/gmp-6.2.1.tar.xz
   # parsed=($response)
-  ./arm-homebrew/bin/brew install $cache_path
+  ./arm-homebrew/bin/brew install gmp
 fi
