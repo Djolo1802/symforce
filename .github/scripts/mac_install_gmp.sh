@@ -12,7 +12,7 @@ if [ "$CIBW_ARCHS_MACOS" = "arm64" ]; then
   curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C arm-homebrew
   cache_path=$(./arm-homebrew/bin/brew --cache gmp)
   echo $cache_path
-  curl --output $cache_path http://ftp.swin.edu.au/gnu/gmp/gmp-6.2.1.tar.xz
+  curl --output $cache_path https://mirrors.cloud.tencent.com/homebrew-bottles/gmp-6.2.1_1.arm64_big_sur.bottle.tar.gz
   # parsed=($response)
-  ./arm-homebrew/bin/brew install gmp
+  ./arm-homebrew/bin/brew install $cache_path
 fi
